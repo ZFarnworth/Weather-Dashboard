@@ -8,7 +8,7 @@ var recentSearchContainer = document.getElementById('recent-search');
 var recentButtonIndex = 0;
 
 var currentWeather = function(location){
-    var currentWeatherAPI = "https://api.openweathermap.org/data/2.5/weather?q="+location+"&units=imperial&appid=803fa34dbd4909977dd765eb002a2987";
+    var currentWeatherAPI = "https://api.openweathermap.org/data/2.5/weather?q="+location+"&units=imperial&appid=cdbe094b63f52ec5b9bfa25eae6ac11f";
     fetch(currentWeatherAPI).then(function(response){
         response.json().then(function(data){
             displayWeather(data, location)
@@ -17,7 +17,7 @@ var currentWeather = function(location){
     });
 };
 var fiveDayForcast = function(location){
-    var fiveDayForecastAPI = "https://api.openweathermap.org/data/2.5/forecast?q="+location+"&units=imperial&appid=803fa34dbd4909977dd765eb002a2987";
+    var fiveDayForecastAPI = "https://api.openweathermap.org/data/2.5/forecast?q="+location+"&units=imperial&appid=cdbe094b63f52ec5b9bfa25eae6ac11f";
     fetch(fiveDayForecastAPI).then(function(response){
         response.json().then(function(data){
             displayFiveDay(data, location)
